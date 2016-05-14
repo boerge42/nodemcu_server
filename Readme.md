@@ -16,23 +16,24 @@ beschrieben werden und in [Tcl](http://www.tcl.tk/) geschrieben ist. Tcl
 ist u.a. unter den Betriebssystemen Linux, Windows und MacOS verfügbar.
 
 ## NodeMCU-Client (nodemcu_client.tcl)
-Bei der Client-Komponente handelt es sich um ein Script, welches, mittels 
+Bei der Client-Komponente handelt es sich um ein Tcl-Script, welches, über
 entsprechende Übergabeparameter gesteuert, Lua-Dateien an den NodeMCU-Server 
-sendet. Die möglichen Übergabeparameter sind den Kommentaren des Scripts 
-zu entnehmen!
+sendet. Die möglichen Übergabeparameter sind den Kommentaren des entsprechenden
+Tcl-Scripts zu entnehmen!
 
 Idee dabei war, dass das Client-Script in die Funktionalität (...sprich 
-Funktionstasten...) des "Lieblings"-Editors eingebunden wird.
+z.B. Funktionstasten...) des "Lieblings"-Editors eingebunden wird.
 
 ## NodeMCU-Server (nodemcu_server.tcl)
 Die Server-Komponente bedient die serielle Schnittstelle zum ESP-Modul. Zum
 Server gesendete Anforderungen/Befehle/Daten werden zum ESP-Chip gesendet. 
-Die Ausgaben werden in einem Terminal dargestellt. 
+Die daraus resultierenden Ausgaben werden in einem Terminal dargestellt. 
 
 ![nodemcu_server](https://github.com/boerge42/nodemcu_server/blob/master/pic/nodemcu_server.png)
 
 Neben einigen vordefinierten NodeMCU-Befehlen, können über den Terminalbereich
-auch weitere NodeMCU-Befehle eingegeben/ausgewählt und, mit Betätigung der 
+auch weitere NodeMCU-Befehle eingegeben oder ausgewählt (Eingabe-Cursor auf
+entsprechende Terminalzeile positionieren...) und, mit Betätigung der 
 RETURN-Taste, zum ESP-Modul gesendet werden.
 
 Der NodeMCU-Server muss gestartet sein, um Befehle des Clients entgegennehmen 
