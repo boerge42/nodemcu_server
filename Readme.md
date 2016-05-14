@@ -12,7 +12,7 @@ Ausgabekanal der Lua-Umgebung. RTFM...! Als Softwareentwickler benötigt man als
 Toolchain, mit der man die serielle Schnittstelle entsprechend bedienen kann!
 
 Die hier vorliegende Toolchain besteht aus zwei Komponenten, die in der Folge 
-beschrieben werden und in [Tcl](http://www.tcl.tk/) geschrieben ist. Tcl
+beschrieben wird und in [Tcl](http://www.tcl.tk/) geschrieben ist. Tcl
 ist u.a. unter den Betriebssystemen Linux, Windows und MacOS verfügbar.
 
 ## NodeMCU-Client (nodemcu_client.tcl)
