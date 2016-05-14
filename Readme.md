@@ -8,10 +8,10 @@ Bausteine mittels der Scriptsprache [Lua](https://www.lua.org/) programmiert
 werden können. Die serielle Schnittstelle ist dabei die Verbindung zur "Außenwelt",
 über die u.a. Lua-Scripte in den Flash-Speicher des Chip geladen, verwaltet 
 und gestartet werden können. Weiterhin dient die serielle Schnittstelle auch als
-Ausgabekanal der Lua-Umgebung. RTFM...! Als Softwareentwickler benötigt man also einen
+Ausgabekanal der Lua-Umgebung. RTFM...! Als Softwareentwickler benötigt man also eine
 Toolchain, mit der man die serielle Schnittstelle entsprechend bedienen kann!
 
-Die vorliegende Toolchain besteht aus zwei Komponenten, die in der Folge 
+Die hier vorliegende Toolchain besteht aus zwei Komponenten, die in der Folge 
 beschrieben werden und in [Tcl](http://www.tcl.tk/) geschrieben ist. Tcl
 ist u.a. unter den Betriebssystemen Linux, Windows und MacOS verfügbar.
 
