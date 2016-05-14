@@ -38,7 +38,13 @@ RETURN-Taste, zum ESP-Modul gesendet werden.
 Der NodeMCU-Server muss gestartet sein, um Befehle des Clients entgegennehmen 
 zu können.
 
-## Installation
+## Installation und Start NodeMCU-Server
+```
+git clone git://github.com/boerge42/nodemcu_server.git
+cd nodemcu_server
 make install
 
+nodemcu_server.tcl
+
+```
 
