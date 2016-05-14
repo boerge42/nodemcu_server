@@ -29,7 +29,7 @@ Die Server-Komponente bedient die serielle Schnittstelle zum ESP-Modul. Zum
 Server gesendete Anforderungen/Befehle/Daten werden zum ESP-Chip gesendet. 
 Die Ausgaben werden in einem Terminal dargestellt. 
 
-![nodemcu_server](/../nodemcu_server/pic/nodemcu_server.png)
+![nodemcu_server](https://github.com/boerge42/nodemcu_server/blob/master/pic/nodemcu_server.png)
 
 Neben einigen vordefinierten NodeMCU-Befehlen, können über den Terminalbereich
 auch weitere NodeMCU-Befehle eingegeben/ausgewählt und, mit Betätigung der 
