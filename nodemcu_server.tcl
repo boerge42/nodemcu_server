@@ -171,22 +171,6 @@ proc set_widget_state {tl state} {
 }
 
 # *******************************************
-proc _____execute_term_cmd {} {
-	set c .f_term.term
-	if {[$c compare {insert + 1 lines} < end]} then {
-		set l [$c get {insert linestart} {insert lineend}]
-		$c insert {end - 1 chars} \n[string trimright $l]
-		$c mark set insert end
-		$c see insert
-		serial_tx $l 1
-	} else {
-		puts [$c get end-1lines end-1chars]
-		serial_tx [$c get end-1lines end-1chars] 1
-	}
-	.f_term.term insert end "\n" color_tx
-}
-
-# *******************************************
 proc format_term_cmd_line {txt} {
 	return [string trimleft $txt {> " "}]
 }
@@ -259,7 +243,6 @@ proc serial_rx {com} {
 # *******************************************
 proc serial_tx {txt echo} {
 	global com com_is_open
-#	puts $txt
 	if {$echo} {.f_term.term insert end "\n" color_tx}
 	foreach c [split $txt ""] {
 		if {$echo} {.f_term.term insert end $c color_tx}
@@ -289,8 +272,6 @@ proc server_rx {chan addr port} {
 
 # GUI...
 gui_init
-
-#.f_term.term insert end "dofile('dht_test.lua')\n" color_rx
 
 # Server-Socket definieren
 socket -server server_rx 12345
