@@ -164,6 +164,11 @@ proc gui_init {} {
 }
 
 # *******************************************
+proc error_msg {msg} {
+	tk_messageBox -title "Error!" -message $msg -icon error -type ok
+}
+
+# *******************************************
 proc set_widget_state {tl state} {
 	foreach w [winfo children $tl] {
 		$w configure -state $state
@@ -210,7 +215,10 @@ proc term_clear {} {
 proc serial_open {} {
 	global device mode com com_is_open
 	if {$com_is_open == 0} {
-		set com [open $device RDWR]
+		if {[catch {set com [open $device RDWR]} err]} {
+			error_msg $err
+			return			
+		}
 		fconfigure $com -mode $mode -translation binary -buffering none -blocking 0
 		fileevent $com readable {serial_rx $com}
 		set com_is_open 1
